@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MijnFilms_MarleinGeoffrey.Entities.Movie>
+@{
+    ViewData["Title"] = "Lijst";
+}
+
+<h2>Lijst</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Titel
+            </th>
+            <th>
+                Jaar
+            </th>
+            <th>
+                Waardering
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @for(int i = 0; i < Convert.ToInt32(item.Stars); i++)
+                {
+                    <span class="glyphicon glyphicon-star"></span>
+
+                }
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.MovieId" class="glyphicon glyphicon-film"></a>
+            </td>
+        </tr>
+        }
+    </tbody>

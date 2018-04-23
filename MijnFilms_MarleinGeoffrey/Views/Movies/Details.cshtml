@@ -1,0 +1,45 @@
+﻿@model MijnFilms_MarleinGeoffrey.Entities.Movie
+@{
+    Layout = null;
+    var imgsrc = "/images/" + Model.Title+".jpg";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <h1>Details</h1>
+    <img src="@imgsrc"/>
+    <table class="table">
+        <tr>
+            <th>Titel</th>
+            <td>@Html.DisplayFor(model => model.Title)</td>
+        </tr>
+        <tr>
+            <th>Jaar</th>
+            <td>@Html.DisplayFor(model => model.Year)</td>
+        </tr>
+        <tr>
+            <th>Waardering</th>
+            <td>@Html.DisplayFor(model => model.Title)</td>
+        </tr>
+        <tr>
+            <th>Beschrijving</th>
+            <td>@Html.DisplayFor(model => model.Description)</td>
+        <tr>
+            <th>Regisseur</th>
+            <td>@ViewBag.Director</td>
+        </tr>
+        <tr>
+            <th>Genre</th>
+            <td>@ViewBag.Genre</td>
+        </tr>
+
+
+    </table>
+</body>
+</html>

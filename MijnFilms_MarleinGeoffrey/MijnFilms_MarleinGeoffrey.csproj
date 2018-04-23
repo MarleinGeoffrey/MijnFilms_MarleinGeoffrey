@@ -6,10 +6,21 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\A Quiet Place.jpg" />
+    <None Include="wwwroot\images\Ghost in the Shell.jpg" />
+    <None Include="wwwroot\images\Guardians of the Galaxy.jpg" />
+    <None Include="wwwroot\images\Minions.jpg" />
+    <None Include="wwwroot\images\Sing.jpg" />
+    <None Include="wwwroot\images\Split.jpg" />
+    <None Include="wwwroot\images\Star Wars The Last Jedi.jpg" />
   </ItemGroup>
 
 </Project>
